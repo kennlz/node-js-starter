@@ -19,6 +19,8 @@ gulp.task('test', ['build'], () => {
 
 });
 gulp.task('default', ['build'], () => {
-
+	const server = gls('dist/app.js');
+	server.start().then(result => process.exit(result.code));
+	gulp.watch('src/*.js', ['build'], server.start.bind(server));
 });
 
