@@ -6,4 +6,5 @@
 			},
 			"include": ["transform-async-to-generator"]
 		}]
+	]
 }
