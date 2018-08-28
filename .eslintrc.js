@@ -5,7 +5,7 @@ module.exports = {
 		"es6": true
 	},
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": ["error", 2],
 		"no-tabs": 0,
 		"no-unused-vars": 1,
 		"no-unused-expressions": 1,

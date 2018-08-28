@@ -5,26 +5,25 @@
   "main": "index.js",
   "author": "Liam Kennedy",
   "license": "MIT",
+  "scripts": {
+    "start": "node -r esm src/app.js",
+    "dev": "yarn lint && yarn test && nodemon -r esm src/app.js",
+    "lint": "eslint src/*.js && eslint src/*/*.js",
+    "test": "mocha -r esm src/*/*.spec.js --reporter $REPORTER"
+  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
-    "gulp-eslint": "^4.0.2",
-    "gulp-mocha": "^6.0.0",
-    "gulp-nodemon": "^2.2.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5",
     "sinon": "^5.0.10"
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
+    "esm": "^3.0.80",
     "express": "^4.16.3"
   }
 }
